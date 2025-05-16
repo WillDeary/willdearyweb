@@ -20,8 +20,8 @@ export default function RootLayout({
     <html lang="en" className={`${raleway.variable} ${inter.variable}`}>
       <body className="font-sans bg-white text-gray-900">
         <header className="border-b">
-          <nav className="container mx-auto px-6 py-4">
-            <ul className="flex space-x-6 justify-center">
+          <nav className="container mx-auto px-4 py-4">
+            <ul className="flex flex-wrap justify-center gap-4 sm:gap-6">
               <li>
                 <Link href="/" className="hover:text-gray-600 transition-colors">
                   Home
@@ -50,9 +50,9 @@ export default function RootLayout({
             </ul>
           </nav>
         </header>
-        <main className="container mx-auto px-6 py-12">{children}</main>
+        <main className="container mx-auto py-6 sm:py-12">{children}</main>
         <footer className="border-t py-6">
-          <div className="container mx-auto px-6 text-center text-gray-600">
+          <div className="container mx-auto px-4 text-center text-gray-600">
             © {new Date().getFullYear()} William Deary. All rights reserved.
           </div>
         </footer>
@@ -60,4 +60,3 @@ export default function RootLayout({
     </html>
   )
 }
-

@@ -26,8 +26,8 @@ export default function Blog() {
   ]
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="font-raleway text-3xl font-bold mb-6">Blog</h1>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <h1 className="font-raleway text-2xl sm:text-3xl font-bold mb-6">Blog</h1>
       <div className="space-y-8">
         {blogPosts.map((post, index) => (
           <article key={index} className="border-b pb-8">
@@ -36,11 +36,11 @@ export default function Blog() {
               alt={post.title}
               width={300}
               height={200}
-              className="rounded-lg mb-4"
+              className="rounded-lg mb-4 w-full"
             />
-            <h2 className="font-raleway text-2xl font-bold mb-2">{post.title}</h2>
-            <p className="text-gray-600 mb-2">{post.date}</p>
-            <p className="mb-4">{post.excerpt}</p>
+            <h2 className="font-raleway text-xl sm:text-2xl font-bold mb-2">{post.title}</h2>
+            <p className="text-gray-600 mb-2 text-sm">{post.date}</p>
+            <p className="mb-4 text-sm sm:text-base">{post.excerpt}</p>
             <Link href="#" className="text-blue-600 hover:underline">
               Read more
             </Link>
@@ -50,4 +50,3 @@ export default function Blog() {
     </div>
   )
 }
-

@@ -19,13 +19,13 @@ export default function Events() {
   ]
 
   return (
-    <div className="max-w-3xl mx-auto">
-      <h1 className="font-raleway text-3xl font-bold mb-6">Events</h1>
+    <div className="max-w-3xl mx-auto px-4 sm:px-6">
+      <h1 className="font-raleway text-2xl sm:text-3xl font-bold mb-6">Events</h1>
       <section className="mb-12">
-        <h2 className="font-raleway text-2xl font-bold mb-4">Upcoming Events</h2>
+        <h2 className="font-raleway text-xl sm:text-2xl font-bold mb-4">Upcoming Events</h2>
         <div className="space-y-6">
           {upcomingEvents.map((event, index) => (
-            <div key={index} className="flex items-center space-x-4 border-b pb-4">
+            <div key={index} className="flex flex-col sm:flex-row items-center gap-4 border-b pb-4">
               <Image
                 src="/placeholder.svg?height=80&width=80"
                 alt={event.name}
@@ -33,20 +33,20 @@ export default function Events() {
                 height={80}
                 className="rounded-lg"
               />
-              <div>
-                <h3 className="font-raleway text-xl font-bold">{event.name}</h3>
-                <p>{event.date}</p>
-                <p>{event.location}</p>
+              <div className="text-center sm:text-left">
+                <h3 className="font-raleway text-lg sm:text-xl font-bold">{event.name}</h3>
+                <p className="text-sm">{event.date}</p>
+                <p className="text-sm">{event.location}</p>
               </div>
             </div>
           ))}
         </div>
       </section>
       <section>
-        <h2 className="font-raleway text-2xl font-bold mb-4">Past Events</h2>
+        <h2 className="font-raleway text-xl sm:text-2xl font-bold mb-4">Past Events</h2>
         <div className="space-y-6">
           {pastEvents.map((event, index) => (
-            <div key={index} className="flex items-center space-x-4 border-b pb-4">
+            <div key={index} className="flex flex-col sm:flex-row items-center gap-4 border-b pb-4">
               <Image
                 src="/placeholder.svg?height=80&width=80"
                 alt={event.name}
@@ -54,10 +54,10 @@ export default function Events() {
                 height={80}
                 className="rounded-lg"
               />
-              <div>
-                <h3 className="font-raleway text-xl font-bold">{event.name}</h3>
-                <p>{event.date}</p>
-                <p>{event.location}</p>
+              <div className="text-center sm:text-left">
+                <h3 className="font-raleway text-lg sm:text-xl font-bold">{event.name}</h3>
+                <p className="text-sm">{event.date}</p>
+                <p className="text-sm">{event.location}</p>
                 <p className="font-bold text-blue-600">{event.result}</p>
               </div>
             </div>
@@ -67,4 +67,3 @@ export default function Events() {
     </div>
   )
 }
-
