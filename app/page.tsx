@@ -34,25 +34,29 @@ export default function Home() {
         />
       </section>
 
-      <section className="flex flex-col sm:flex-row items-center gap-6 sm:space-x-8">
-        <Image
-          src="/placeholder.svg?height=200&width=300"
-          alt="Olympic Ambition Programme 2016"
-          width={300}
-          height={200}
-          className="rounded-lg w-full sm:w-auto"
-        />
-        <div className="flex-1">
-          <h2 className="font-raleway text-xl sm:text-2xl font-bold mb-4">Olympic Ambition Programme 2016</h2>
-          <p className="mb-4 text-sm sm:text-base">
-            I was nominated by the British Olympic Association to take part in the Olympic Ambition Programme 2016. This
-            meant I could be at Olympic games in Rio de Janeiro, train with the athletes and gain the experience of an
-            Olympic Games to prepare me for future games by getting me used to the atmosphere before hand.
-          </p>
-          <p className="mb-4 text-sm sm:text-base">It was an incredible experience for which I am extremely grateful for.</p>
-          <Link href="/blog" className="text-blue-600 hover:underline">
-            More details here
-          </Link>
+      <section className="bg-gray-50 rounded-lg p-6">
+        <div className="flex flex-col lg:flex-row items-center gap-8">
+          <div className="lg:w-1/2">
+            <Image
+              src="/placeholder.svg?height=400&width=600"
+              alt="Olympic Ambition Programme 2016"
+              width={600}
+              height={400}
+              className="rounded-lg w-full object-cover"
+            />
+          </div>
+          <div className="lg:w-1/2">
+            <h2 className="font-raleway text-xl sm:text-2xl font-bold mb-4">Olympic Ambition Programme 2016</h2>
+            <p className="mb-4 text-sm sm:text-base">
+              I was nominated by the British Olympic Association to take part in the Olympic Ambition Programme 2016. This
+              meant I could be at Olympic games in Rio de Janeiro, train with the athletes and gain the experience of an
+              Olympic Games to prepare me for future games by getting me used to the atmosphere before hand.
+            </p>
+            <p className="mb-4 text-sm sm:text-base">It was an incredible experience for which I am extremely grateful for.</p>
+            <Link href="/blog" className="text-blue-600 hover:underline">
+              More details here
+            </Link>
+          </div>
         </div>
       </section>
 
